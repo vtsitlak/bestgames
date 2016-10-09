@@ -1,0 +1,32 @@
+<div class="container">
+    <h3><i class="fa fa-flag-checkered" aria-hidden="true"></i> Featured Games
+    </h3>
+    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        <div uib-slide ng-repeat="game in games | limitTo: featuredNumber track by $index  " index="$index">
+            <img class="img-responsive" ng-src="{{game.mediaFiles.FEATURED_TWO_THIRDS['840']}}" style="margin:auto;" alt="{{game.name}}">
+            <div>
+                 <h6 class="desc" ng-bind-html='game.description'></h6>
+                <button type="button" class="btn btn-success col-xs-4" ng-click="getMyCtrlScope().gameLink(game.name, game.path,  game.gamePlayUrl, game.seoKeywords, game.description, game.categoryIds, game.tags, game.id)"><i class="fa fa-play-circle" aria-hidden="true"></i> Play
+                    <!--{{game.name}}-->
+                </button>
+                <button type="button" class="btn btn-info col-xs-4" ng-click=""><i class="fa fa-clock-o" aria-hidden="true"></i> Play later</button>
+                <button type="button" class="btn btn-warning col-xs-4" ng-click="toggle = !toggle"><i class="fa fa-heart" aria-hidden="true" ng-class="{'red' : toggle}"></i> Favorites
+                </button>
+               
+                <p class="sr-only" ng-repeat="category in game.categoryIds">{{category}}</p>
+                <p class="sr-only" ng-repeat="tag in game.tags">{{tag}}</p>
+                <p class="sr-only">{{game.seoKeywords}}</p>
+                <p class="sr-only">{{game.name}}</p>
+                <p class="sr-only">{{game.id}}</p>
+            </div>
+        </div>
+    </div>
+    <h3><i class="fa fa-archive" aria-hidden="true"></i>
+ All Games
+    </h3>
+    <div class="row row-no-padding">
+        <div ng-repeat="game in games">
+            <game-item game='game' cs="getMyCtrlScope()" class="col-xs-3 col-sm-2"></game-item>
+        </div>
+    </div>
+</div>

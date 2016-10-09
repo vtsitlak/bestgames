@@ -1,0 +1,40 @@
+body {
+    margin-top: 50px;
+    background-color: @custom-grey-light;
+    color: @custom-blue;
+    font-family: @font-family-sorti;
+    .logo {
+        font-family: @font-family-arcade-r;
+    }
+    //.carousel-control,
+    .carousel-indicators {
+        display: none;
+    }
+    .carousel .item {
+        width: 100%;
+        /*slider width*/
+        max-height: 600px;
+        /*slider height*/
+    }
+    .carousel .item img {
+        width: 100%;
+        /*img width*/
+    }
+    .red {
+        color: red;
+    }
+    .row-no-padding {
+        [class*="col-"] {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+    @media (min-width: @screen-sm ) {
+        margin-top: 80px;
+    }
+    .desc {
+        @media (min-width: @screen-sm ) {
+            font-size: 1.2em;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.navigation-menu {
+    background-color: @custom-orange;
+    border: none;
+    .form-group {
+        margin: auto!important;
+    }
+    .logo {
+        font-size: 10px;
+        word-spacing: -10px;
+        text-transform: capitalize!important;
+        @media (min-width: @screen-sm ) {
+            font-size: 16px;
+        }
+    }
+    .inline{
+        display:inline;
+    }
+    .dropdown-toggle{
+        width: 138px;
+    }
+    a,
+    .logo {
+        color: @custom-blue!important;
+    }
+    button {
+        border-color: @custom-blue!important;
+    }
+    .navbar-form {
+        border: none!important;
+        padding: 0 15px!important;
+        max-width: 180px;
+        float: right;
+        margin-right: 15px;
+        @media (min-width: @screen-sm ) {
+            width: 220px!important;
+            max-width: 220px;
+        }
+        @media (min-width: @screen-md ) {
+            width: 280px!important;
+            max-width: 280px;
+        }
+    }
+}

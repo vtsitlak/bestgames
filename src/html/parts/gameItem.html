@@ -1,0 +1,13 @@
+<div class="game-item thumbnail">
+    <a href="" data-toggle="tooltip" title="{{game.name}}" ng-click="cs.gameLink(game.name, game.path,  game.gamePlayUrl, game.seoKeywords, game.description, game.categoryIds, game.tags, game.id)"><img class="thumbnail-img img-responsive" image-error-directive ng-src="{{game.mediaFiles.ICON['72']}}" alt="icon" /></a>
+    <div class="caption">
+        <p>{{game.name}}</p>
+        <rating value="game.rating" max="cs.maxRate"></rating>
+        <p class="sr-only">{{game.description}}</p>
+        <p class="sr-only" ng-repeat="category in game.categoryIds">{{category}}</p>
+        <p class="sr-only" ng-repeat="tag in game.tags">{{tag}}</p>
+        <p class="sr-only">{{game.seoKeywords}}</p>
+        <p class="sr-only">{{game.name}}</p>
+        <p class="sr-only">{{game.id}}</p>
+    </div>
+</div>
