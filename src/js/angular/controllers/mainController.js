@@ -52,7 +52,7 @@ app.controller('mainController', ['$scope', '$state', 'gamesService', 'stateServ
 
         // call state provider to create a new state, adds the seoKeywords and go there       
 
-        stateService.addState(st, url, templ, seoKeywords, description);
+        stateService.addState(st, url, templ, seoKeywords, description, categoryIds, tags, id);
         $state.go(st);
         
         // !!!!!!! uncoment the window location and coment the stateservice and state go 
